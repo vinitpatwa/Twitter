@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LoginController.h
 //  Twitter
 //
 //  Created by Vinit Patwa on 10/30/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LoginController : UIViewController
 
 @end
-
