@@ -14,6 +14,12 @@
 @property (nonatomic, strong) NSString *screenname;
 @property (nonatomic, strong) NSString *profileImageUrl;
 @property (nonatomic, strong) NSString *tagline;
+@property int  follower;
+@property int following;
+@property int tweetsCount;
+
+
+//@property (nonatomic, strong) long *userID;
 
 - (id) initWithDictionary:(NSDictionary *)dictionary;
 

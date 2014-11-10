@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		1C3022031A05D73300E6CAE4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3022021A05D73300E6CAE4 /* User.m */; };
 		1C3022061A05D74400E6CAE4 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3022051A05D74400E6CAE4 /* Tweet.m */; };
+		1C3103361A1084DF00499693 /* HamburgerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3103341A1084DF00499693 /* HamburgerViewController.m */; };
+		1C3103371A1084DF00499693 /* HamburgerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C3103351A1084DF00499693 /* HamburgerViewController.xib */; };
+		1C31033B1A108A9500499693 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3103391A108A9500499693 /* SettingsController.m */; };
+		1C31033C1A108A9500499693 /* SettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C31033A1A108A9500499693 /* SettingsController.xib */; };
+		1C3103401A108C2800499693 /* SettingsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C31033E1A108C2800499693 /* SettingsCell.m */; };
+		1C3103411A108C2800499693 /* SettingsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C31033F1A108C2800499693 /* SettingsCell.xib */; };
+		1C3103451A109CAF00499693 /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3103431A109CAF00499693 /* ProfileController.m */; };
+		1C3103461A109CAF00499693 /* ProfileController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C3103441A109CAF00499693 /* ProfileController.xib */; };
 		1C31CD9E1A028997008EDE69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C31CD9D1A028997008EDE69 /* main.m */; };
 		1C31CDA11A028997008EDE69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C31CDA01A028997008EDE69 /* AppDelegate.m */; };
 		1C31CDA91A028997008EDE69 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C31CDA81A028997008EDE69 /* Images.xcassets */; };
@@ -43,6 +51,18 @@
 		1C3022021A05D73300E6CAE4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		1C3022041A05D74400E6CAE4 /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
 		1C3022051A05D74400E6CAE4 /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
+		1C3103331A1084DF00499693 /* HamburgerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HamburgerViewController.h; sourceTree = "<group>"; };
+		1C3103341A1084DF00499693 /* HamburgerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HamburgerViewController.m; sourceTree = "<group>"; };
+		1C3103351A1084DF00499693 /* HamburgerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HamburgerViewController.xib; sourceTree = "<group>"; };
+		1C3103381A108A9500499693 /* SettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
+		1C3103391A108A9500499693 /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
+		1C31033A1A108A9500499693 /* SettingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsController.xib; sourceTree = "<group>"; };
+		1C31033D1A108C2800499693 /* SettingsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsCell.h; sourceTree = "<group>"; };
+		1C31033E1A108C2800499693 /* SettingsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsCell.m; sourceTree = "<group>"; };
+		1C31033F1A108C2800499693 /* SettingsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsCell.xib; sourceTree = "<group>"; };
+		1C3103421A109CAF00499693 /* ProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileController.h; sourceTree = "<group>"; };
+		1C3103431A109CAF00499693 /* ProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileController.m; sourceTree = "<group>"; };
+		1C3103441A109CAF00499693 /* ProfileController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileController.xib; sourceTree = "<group>"; };
 		1C31CD981A028997008EDE69 /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C31CD9C1A028997008EDE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C31CD9D1A028997008EDE69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -192,6 +212,15 @@
 				1C775ECC1A06CC6D004337DA /* ComposeTweetController.h */,
 				1C775ECD1A06CC6D004337DA /* ComposeTweetController.m */,
 				1C775ECE1A06CC6D004337DA /* ComposeTweetController.xib */,
+				1C3103331A1084DF00499693 /* HamburgerViewController.h */,
+				1C3103341A1084DF00499693 /* HamburgerViewController.m */,
+				1C3103351A1084DF00499693 /* HamburgerViewController.xib */,
+				1C3103381A108A9500499693 /* SettingsController.h */,
+				1C3103391A108A9500499693 /* SettingsController.m */,
+				1C31033A1A108A9500499693 /* SettingsController.xib */,
+				1C3103421A109CAF00499693 /* ProfileController.h */,
+				1C3103431A109CAF00499693 /* ProfileController.m */,
+				1C3103441A109CAF00499693 /* ProfileController.xib */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -202,6 +231,9 @@
 				1C31CDD71A029096008EDE69 /* TweetCell.h */,
 				1C31CDD81A029096008EDE69 /* TweetCell.m */,
 				1C31CDD91A029096008EDE69 /* TweetCell.xib */,
+				1C31033D1A108C2800499693 /* SettingsCell.h */,
+				1C31033E1A108C2800499693 /* SettingsCell.m */,
+				1C31033F1A108C2800499693 /* SettingsCell.xib */,
 			);
 			name = cell;
 			sourceTree = "<group>";
@@ -296,12 +328,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C3103371A1084DF00499693 /* HamburgerViewController.xib in Resources */,
 				1C775ECB1A06B365004337DA /* DetailTweetController.xib in Resources */,
+				1C3103461A109CAF00499693 /* ProfileController.xib in Resources */,
 				1C775ED01A06CC6D004337DA /* ComposeTweetController.xib in Resources */,
 				1C31CDAC1A028997008EDE69 /* LaunchScreen.xib in Resources */,
+				1C3103411A108C2800499693 /* SettingsCell.xib in Resources */,
 				1C31CDDB1A029096008EDE69 /* TweetCell.xib in Resources */,
 				1C31CDD51A028F07008EDE69 /* TweetsController.xib in Resources */,
 				1C31CDD01A028AB4008EDE69 /* LoginController.xib in Resources */,
+				1C31033C1A108A9500499693 /* SettingsController.xib in Resources */,
 				1C31CDA91A028997008EDE69 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C31033B1A108A9500499693 /* SettingsController.m in Sources */,
 				1C3022031A05D73300E6CAE4 /* User.m in Sources */,
 				1C31CDCF1A028AB4008EDE69 /* LoginController.m in Sources */,
 				1C3022061A05D74400E6CAE4 /* Tweet.m in Sources */,
@@ -363,6 +400,9 @@
 				1C31CDDA1A029096008EDE69 /* TweetCell.m in Sources */,
 				1C31CDD41A028F07008EDE69 /* TweetsController.m in Sources */,
 				1C31CD9E1A028997008EDE69 /* main.m in Sources */,
+				1C3103451A109CAF00499693 /* ProfileController.m in Sources */,
+				1C3103401A108C2800499693 /* SettingsCell.m in Sources */,
+				1C3103361A1084DF00499693 /* HamburgerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

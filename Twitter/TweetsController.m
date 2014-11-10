@@ -37,6 +37,8 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"New" style:UIBarButtonItemStylePlain target:self action:@selector(onNewTweet)];
     self.title = @"Twitter";
     
+    if(!self.mentions) {
+    
     [[TwitterClient sharedInstance] getHomeTimeLine:^(NSArray *tweets, NSError *error) {
         if(tweets != nil){
             self.tweets = tweets;
@@ -50,6 +52,20 @@
         }
     }];
     
+    } else {
+        [[TwitterClient sharedInstance] getMentionTimeLine:^(NSArray *tweets, NSError *error) {
+            if(tweets != nil){
+                self.tweets = tweets;
+                //show Tweets
+                NSLog(@"Welcome %lu", tweets.count);
+                [self.tweetsview reloadData];
+                [self dismissSuccess];
+            }else {
+                //show error view
+                [self dismissError];
+            }
+        }];
+    }
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(onRefresh) forControlEvents:UIControlEventValueChanged];
     [self.tableView insertSubview:self.refreshControl atIndex:0];
@@ -79,8 +95,11 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TweetCell *cell = [self.tweetsview  dequeueReusableCellWithIdentifier:@"TweetCell" forIndexPath:indexPath];
+    TweetCell *cell = [tableView  dequeueReusableCellWithIdentifier:@"TweetCell" forIndexPath:indexPath];
+    cell.parentController = self;
+ 
     Tweet *t = self.tweets[indexPath.row];
+    cell.currentTweet = t;
     cell.userFirstName.text  = t.user.name;
     cell.username.text = [NSString stringWithFormat:@"@%@",t.user.screenname];
     cell.Tweet.text = t.text;
@@ -186,7 +205,6 @@
     dvc.currentTweet = self.tweets[indexPath.row];
     [self.navigationController pushViewController:dvc animated:YES];
 }
-
 
 /*
  #pragma mark - Navigation

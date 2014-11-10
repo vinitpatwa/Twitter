@@ -7,6 +7,7 @@
 //
 
 #import "TweetCell.h"
+#import "ProfileController.h"
 
 @interface TweetCell ()
 
@@ -25,6 +26,9 @@ BOOL reTweetOne = true;
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    UITapGestureRecognizer *imageTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTap:)];
+    [self.userimage addGestureRecognizer:imageTapGestureRecognizer];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -69,4 +73,23 @@ BOOL reTweetOne = true;
        UIImage *retweet_hover = [UIImage imageNamed:@"retweet"];
         [self.reTweet setImage:retweet_hover forState:UIControlStateNormal];    }
 }
+
+//- (IBAction)imageTap:(UITapGestureRecognizer *)sender {
+//    ProfileController *profile = [[ProfileController alloc] init];
+//    profile.user = self.currentTweet.user;
+//    
+//    [self.parentController.navigationController pushViewController:profile animated:YES];
+//    
+//}
+
+- (IBAction)imageTap:(UITapGestureRecognizer *)sender {
+    NSLog(@"I m herekfhadskjfhadskfh");
+        ProfileController *profile = [[ProfileController alloc] init];
+        profile.user = self.currentTweet.user;
+    
+        [self.parentController.navigationController pushViewController:profile animated:YES];
+    
+}
+
+
 @end

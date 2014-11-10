@@ -9,6 +9,9 @@
 #import "LoginController.h"
 #import "TweetsController.h"
 #import "TwitterClient.h"
+#import "SettingsController.h"
+#import "HamburgerViewController.h"
+
 
 @interface LoginController ()
 @property (weak, nonatomic) IBOutlet UITextField *username;
@@ -34,10 +37,37 @@
         if(user != nil){
             //show Tweets
             NSLog(@"Welcome %@", user.name);
-            TweetsController *tvc = [[TweetsController alloc] init];
+            
+            //            TweetsController *tvc = [[TweetsController alloc] init];
+            //            tvc.currentUser = user;
+            //            UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:tvc];
+            //            [self presentViewController:nvc animated:YES completion:nil];
+            
+            
+//            SettingsController *tvc = [[SettingsController alloc] init];
+//            tvc.currentUser = user;
+//            
+//            UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:tvc];
+//            [self presentViewController:nvc animated:YES completion:nil];
+            
+            
+                                    TweetsController *tvc = [[TweetsController alloc] init];
+                                    tvc.currentUser = user;
+            
+            
+            SettingsController *svc = [[SettingsController alloc] init];
             tvc.currentUser = user;
-            UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:tvc];
-            [self presentViewController:nvc animated:YES completion:nil];
+            
+            //
+            //            SettingsController *svc = [[SettingsController alloc]init];
+            //            UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:svc];
+            //
+                        HamburgerViewController *vc = [[HamburgerViewController alloc] init];
+                        vc.leftViewController = svc;
+                        vc.contentViewController = tvc;
+            //
+                         [self presentViewController:vc animated:YES completion:nil];
+            
         }else {
             //show error view
         }

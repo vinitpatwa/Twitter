@@ -17,6 +17,8 @@
 -(void)loginWithCompletion:(void (^)(User *user, NSError *error))completion;
 -(void)openURL:(NSURL *)url;
 -(void)getHomeTimeLine:(void (^)(NSArray *tweets, NSError *error))completion;
+-(void)getMentionTimeLine:(void (^)(NSArray *tweets, NSError *error))completion;
+
 - (AFHTTPRequestOperation *)update:(NSString *)status success:(void (^) (AFHTTPRequestOperation *operation, id responseObject))success failure:(void (^) (AFHTTPRequestOperation *operation, NSError *error))failure;
 
 @end

@@ -74,9 +74,23 @@ NSString * const kTwitterBaseUrl = @"https://api.twitter.com";
     [self GET:@"1.1/statuses/home_timeline.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSArray *tweets = [Tweet tweetsWithArray:responseObject];
         self.homeTimeLine(tweets, nil);
-        for (Tweet *tweet in tweets){
-            NSLog(@"tweet: %@, created at: %@", tweet.text, tweet.createdAt);
-        }
+//        for (Tweet *tweet in tweets){
+//            NSLog(@"tweet: %@, created at: %@", tweet.text, tweet.createdAt);
+//        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"failed tweet");
+        self.homeTimeLine(nil,error);
+    }];
+}
+
+-(void)getMentionTimeLine:(void (^)(NSArray *tweets, NSError *error))completion{
+    self.homeTimeLine = completion;
+    [self GET:@"1.1/statuses/mentions_timeline.json" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *tweets = [Tweet tweetsWithArray:responseObject];
+        self.homeTimeLine(tweets, nil);
+//        for (Tweet *tweet in tweets){
+//            NSLog(@"tweet: %@, created at: %@", tweet.text, tweet.createdAt);
+//        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"failed tweet");
         self.homeTimeLine(nil,error);

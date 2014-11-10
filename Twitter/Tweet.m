@@ -24,9 +24,9 @@
         self.createdAt = [formatter dateFromString:createAtString];
         self.favoriteCount = dictionary[@"favorite_count"];
         self.reTweetCount = dictionary[@"retweet_count"];
-        NSLog(@"%@", dictionary);
-        NSLog(@"fav %@", dictionary[@"favorite_count"]);
-        NSLog(@"retweet %@", dictionary[@"retweet_count"]);
+//        NSLog(@"%@", dictionary);
+//        NSLog(@"fav %@", dictionary[@"favorite_count"]);
+//        NSLog(@"retweet %@", dictionary[@"retweet_count"]);
 //        dictionary[@"screen_name"];
 //        self.profileImageUrl = dictionary[@"profile_image_url"];
 //        self.tagline = dictionary[@"description"];

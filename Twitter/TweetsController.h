@@ -12,4 +12,6 @@
 @interface TweetsController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 @property  (nonatomic, strong) User *currentUser;
 @property (strong, nonatomic) NSMutableArray *tweets;
+@property  (strong, nonatomic) NSString *mentions;
+
 @end

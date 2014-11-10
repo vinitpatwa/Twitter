@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tweet.h"
 
 @interface TweetCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *userimage;
@@ -15,5 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *time;
 @property (weak, nonatomic) IBOutlet UILabel *Tweet;
 @property (weak, nonatomic) IBOutlet UIButton *reTweet;
+@property (nonatomic, strong) Tweet *currentTweet;
+@property (nonatomic, strong) UIViewController* parentController;
 - (IBAction)onReTweetCell:(id)sender;
 @end
